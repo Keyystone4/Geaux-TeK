@@ -19,6 +19,7 @@ export default function App() {
               {/* Route components in here */}
               <Route path="/orders/new" element={<NewOrderPage />} />
               <Route path="/orders" element={<OrderHistoryPage />} />
+              <Route path="/orders/:productName" element={<OrderHistoryPage />} />
             </Routes>
           </>
           :
