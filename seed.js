@@ -7,7 +7,7 @@ const Product = require('./models/product');
 // IIFE
 // Immediately Invoked Function Expression
 (async function() {
-//   await Category.deleteMany({});
+  await Category.deleteMany({});
   const categories = await Category.create([
     {name: 'Phones', sortOrder: 10},
     {name: 'Tablets', sortOrder: 20},
@@ -17,7 +17,7 @@ const Product = require('./models/product');
     {name: 'Misc.', sortOrder: 60},
   ]);
 
-//   await Product.deleteMany({});
+  await Product.deleteMany({});
   const products = await Product.create([
     {name: 'iPhoneXS', image: 'https://i.imgur.com/DBbTbei.png', category: categories[0], memory: "64GB", price: 200.95},
     {name: 'iPhone XS Max', image: 'https://i.imgur.com/8LbOb0i.png', category: categories[0], memory: "64GB", price: 220.95},
