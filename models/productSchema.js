@@ -6,7 +6,7 @@ const productSchema = new Schema({
   image: String,
   category: {type: Schema.Types.ObjectId, ref: 'Category'},
   price: { type: Number, required: true },
-  memory: { type: String, required: true }
+  memory: { type: String, required: false }
 }, {
   timestamps: true
 });

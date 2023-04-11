@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import * as productsAPI from '../../utilities/products-api';
+// import './NewOrderPage.css'
+// import { Link } from 'react-router-dom';
+// import MenuList from '../../components/MenuList/MenuList';
 
 export default function NewOrderPage() {
   const [products, setProducts] = useState([]);
