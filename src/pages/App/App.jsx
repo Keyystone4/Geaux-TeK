@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
@@ -21,6 +21,7 @@ export default function App() {
               <Route path="/orders/new" element={<NewOrderPage />} />
               <Route path="/orders" element={<OrderHistoryPage />} />
               <Route path="/orders/:productName" element={<ProductDetailPage />} />
+              <Route path="/*" element={<Navigate to="/orders/new" />} />
             </Routes>
           </>
           :
