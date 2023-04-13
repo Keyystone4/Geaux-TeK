@@ -6,7 +6,7 @@ export default function LineProduct({ lineProduct, isPaid, handleChangeQty }) {
       <div className="flex-ctr-ctr">{lineProduct.product.image}</div>
       <div className="flex-ctr-ctr flex-col">
         <span className="align-ctr">{lineProduct.product.name}</span>
-        {/* <span>{lineProduct.product.price.toFixed(2)}</span> */}
+        <span>{lineProduct.product.price.toFixed(2)}</span>
       </div>
       <div className="qty" style={{ justifyContent: isPaid && 'center' }}>
         {!isPaid &&

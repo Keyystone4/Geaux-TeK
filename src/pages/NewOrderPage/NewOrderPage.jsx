@@ -28,6 +28,7 @@ export default function NewOrderPage({ user, setUser}) {
     async function getCart() {
       const cart = await ordersAPI.getCart();
       setCart(cart);
+      console.log(cart);
     }
     getCart();
   }, []);
@@ -51,16 +52,19 @@ export default function NewOrderPage({ user, setUser}) {
 
   return (
     <main className="NewOrderPage">
+        <header>
+          <Logo /> 
+          <Link to="/orders" className="button btn-sm">Order History</Link>
+          <UserLogOut  user={user} setUser={setUser} />
+          </header>
+          
       <aside>
-        <Logo />
         <CategoryList
           categories={categoriesRef.current}
           activeCat={activeCat}
           setActiveCat={setActiveCat}
-        />
-        <Link to="/orders" className="button btn-sm">Order History</Link>
-        <UserLogOut user={user} setUser={setUser} />
-      </aside>
+          />
+          </aside>
       <ProductList
         products={products.filter(product => product.category.name === activeCat)}
         handleAddToOrder={handleAddToOrder}

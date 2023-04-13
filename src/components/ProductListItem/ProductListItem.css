@@ -1,0 +1,8 @@
+.image {
+   height: 15vh;
+  }
+
+body {
+display: flex;
+justify-content: center;
+}

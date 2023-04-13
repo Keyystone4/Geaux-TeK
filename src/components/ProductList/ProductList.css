@@ -1,4 +1,4 @@
-.MenuList {
+/* .ProductListItem {
     background-color: var(--tan-1);
     border: .1vmin solid var(--tan-3);
     border-radius: 2vmin;
@@ -6,4 +6,10 @@
     padding: 3vmin;
     overflow-y: scroll;
   }
-  
+   */
+
+body {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: auto;
+}

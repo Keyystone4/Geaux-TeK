@@ -5,12 +5,12 @@ export default function ProductList({ products, handleAddToOrder }) {
   const iProducts = products.map(product =>
     <ProductListItem
       key={product._id}
-      iProducts={product}
+      product={product}
       handleAddToOrder={handleAddToOrder}
     />
   );
   return (
-    <main className="Products">
+    <main className="ProductListItem">
       {iProducts}
     </main>
   );
