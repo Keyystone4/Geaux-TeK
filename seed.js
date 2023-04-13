@@ -38,10 +38,10 @@ const Product = require('./models/product');
     {name: 'USB-C Charge Cable (6ft)', image: 'https://i.imgur.com/hQYyTFn.png', category: categories[4], price: 19.95},
     {name: '12w USB Power Adapter', image: 'https://i.imgur.com/zbW2j6M.png', category: categories[4], price: 69.95},
     {name: 'MagSafe Charger', image: 'https://i.imgur.com/gxOf7WZ.png', category: categories[4], price: 89.95},
-    {name: 'iPhone 14 Privacy Screen Protector', image: 'https://i.imgur.com/qrEzJxL.png', category: categories[6], price: 21.95},
-    {name: 'iPhone XS OtterBox', image: 'https://i.imgur.com/h5ODZoa.png', category: categories[6], price: 20.95},
-    {name: 'MacBook Protection Case', image: 'https://i.imgur.com/O6LGIjf.png', category: categories[6], price: 29.95},
-    {name: 'HomePod', image: 'https://i.imgur.com/sVw6nM4.png', category: categories[6], price: 59.95},
+    {name: 'iPhone 14 Privacy Screen Protector', image: 'https://i.imgur.com/qrEzJxL.png', category: categories[5], price: 21.95},
+    {name: 'iPhone XS OtterBox', image: 'https://i.imgur.com/h5ODZoa.png', category: categories[5], price: 20.95},
+    {name: 'MacBook Protection Case', image: 'https://i.imgur.com/O6LGIjf.png', category: categories[5], price: 29.95},
+    {name: 'HomePod', image: 'https://i.imgur.com/sVw6nM4.png', category: categories[5], price: 59.95},
   ]);
 
   console.log(products)

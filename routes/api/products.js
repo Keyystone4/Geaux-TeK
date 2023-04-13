@@ -3,7 +3,7 @@ const router = express.Router();
 const productsCtrl = require('../../controllers/api/products');
 
 // GET /api/items
-// router.get('/', itemsCtrl.index);
+router.get('/', productsCtrl.index);
 // // GET /api/items/:id
 // router.get('/:id', itemsCtrl.show);
 
