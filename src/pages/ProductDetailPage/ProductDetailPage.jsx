@@ -1,8 +1,9 @@
 import { useLocation } from "react-router-dom";
-import NewReviewPage from "../../components/NewReviewPage/NewReviewPage";
+import NewReview from "../../components/NewReview/NewReview";
+import Reviews from "../../components/Reviews/Reviews";
 
 
-export default function ProductDetailPage() {
+export default function ProductDetailPage({user}) {
   let location = useLocation();
   let product = location.state;
   return (
@@ -13,7 +14,11 @@ export default function ProductDetailPage() {
       <h3>{product.memory}</h3>
       <br />
       {/* {product.cast.join(" , ")} */}
-      <NewReviewPage />
+      <NewReview
+      product={product}
+      user={user} />
+      <Reviews 
+      product={product} />
     </>
   );
 }

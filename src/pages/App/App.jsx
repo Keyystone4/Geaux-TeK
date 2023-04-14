@@ -7,6 +7,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import ProductDetailPage from "../ProductDetailPage/ProductDetailPage";
+import EditReviews from "../../components/EditReviews/EditReviews";
 
 
 export default function App() {
@@ -20,7 +21,9 @@ export default function App() {
               {/* Route components in here */}
               <Route path="/orders/new" element={<NewOrderPage user={user} setUser={setUser} />} />
               <Route path="/orders" element={<OrderHistoryPage />} />
-              <Route path="/products/:productName" element={<ProductDetailPage />} />
+              <Route path="/products/:productName" element={<ProductDetailPage user={user}/>} />
+              <Route path="/products/reviews/:id" element={<EditReviews user={user}/>} />
+
               <Route path="/*" element={<Navigate to="/orders/new" />} />
             </Routes>
           </>

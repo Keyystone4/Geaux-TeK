@@ -80,7 +80,7 @@ orderSchema.methods.setProductQty = function(productId, newQty) {
   const lineProduct = cart.lineProducts.find(lineProduct => lineProduct.product._id.equals(productId));
   if (lineProduct && newQty <= 0) {
     // Calling deleteOne, removes the lineItem subdoc from the cart.lineItems array
-    lineProduct.deleteOne();
+    lineProduct.remove();
   } else if (lineProduct) {
     // Set the new qty - positive value is assured thanks to prev if
     lineProduct.qty = newQty;

@@ -3,16 +3,21 @@ import * as reviewsService from '../../utilities/reviews-service';
 
 
 
-export default function NewReviewPage() {
-    const [review, setReview] = useState('');
+export default function NewReviewPage({product}) {
+    const [review, setReview] = useState({
+      text: '',
+      product: product._id
+    });
   
     function handleChange(evt) {
-      setReview(evt.target.value)
+
+      setReview({...review, [evt.target.name] : evt.target.value})
     }
   
     async function handleSubmit(evt) {
       evt.preventDefault();
-      reviewsService.createdReview(review);
+      const createdReview = await reviewsService.createdReview(review);
+      console.log(createdReview)
       setReview('');
     }
   
@@ -21,9 +26,10 @@ export default function NewReviewPage() {
         <h1>New Review</h1>
         <form action="" onSubmit={handleSubmit} >
           <label htmlFor="text">Text:
-            <input type="text" name="text" id="text" onChange={handleChange} value={review}/>
+            <input type="text" name="text" id="text" onChange={handleChange} value={review.text}/>
           </label>
           <input type="submit" value="Add Review" />
+          
         </form>
       </>
     );
