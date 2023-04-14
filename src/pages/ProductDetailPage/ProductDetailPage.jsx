@@ -1,4 +1,6 @@
-import { useParams, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import NewReviewPage from "../../components/NewReviewPage/NewReviewPage";
+
 
 export default function ProductDetailPage() {
   let location = useLocation();
@@ -11,6 +13,7 @@ export default function ProductDetailPage() {
       <h3>{product.memory}</h3>
       <br />
       {/* {product.cast.join(" , ")} */}
+      <NewReviewPage />
     </>
   );
 }
