@@ -1,7 +1,9 @@
 import './ProductListItem.css';
+import { Link } from 'react-router-dom'
 
 export default function ProductListItem({ product, handleAddToOrder }) {
   return (
+    <Link to={`/products/${product.name}`} state={product}>
     <div className="ProductListItem">
       <div className=""><img className='image' src={product.image} alt=''/></div>
       <div className="name">{product.name}</div>
@@ -10,5 +12,6 @@ export default function ProductListItem({ product, handleAddToOrder }) {
           Add To Cart
         </button>
       </div>
+      </Link>
   );
  }

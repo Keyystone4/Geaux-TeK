@@ -20,7 +20,7 @@ export default function App() {
               {/* Route components in here */}
               <Route path="/orders/new" element={<NewOrderPage user={user} setUser={setUser} />} />
               <Route path="/orders" element={<OrderHistoryPage />} />
-              <Route path="/orders/:productName" element={<ProductDetailPage />} />
+              <Route path="/products/:productName" element={<ProductDetailPage />} />
               <Route path="/*" element={<Navigate to="/orders/new" />} />
             </Routes>
           </>

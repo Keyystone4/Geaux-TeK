@@ -57,7 +57,6 @@ orderSchema.methods.addProductToCart = async function (productId) {
   const cart = this;
   // Check if the item already exists in the cart
   const lineProduct = cart.lineProducts.find(lineProduct => lineProduct.product._id.equals(productId));
-  console.log(cart);
   if (lineProduct) {
     // It already exists, so increase the qty
     lineProduct.qty += 1;
