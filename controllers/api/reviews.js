@@ -1,4 +1,4 @@
-const Review = require('../../models/note');
+const Review = require('../../models/review');
 
 module.exports = {
   create
