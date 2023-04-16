@@ -15,12 +15,13 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
   );
 
   return (
+    <>
     <div className="OrderDetail">
       <div className="">
         {order.isPaid ?
           <span>ORDER <span className="smaller">{order.orderId}</span></span>
           :
-          <span>NEW ORDER</span>
+          <><span>NEW ORDER</span><br /></>
         }
         <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
       </div>
@@ -49,5 +50,6 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
       </div>
     </div>
     </div>
+    </>
   );
 }

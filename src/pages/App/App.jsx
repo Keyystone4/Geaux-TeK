@@ -7,8 +7,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import ProductDetailPage from "../ProductDetailPage/ProductDetailPage";
-import EditReviews from "../../components/EditReviews/EditReviews";
-
+import EditReviews from '../../components/EditReview/EditReviews';
 
 export default function App() {
   const [user, setUser] = useState(getUser());

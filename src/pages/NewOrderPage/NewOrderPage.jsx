@@ -52,9 +52,7 @@ export default function NewOrderPage({ user, setUser}) {
   return (
     
     <main className="NewOrderPage">
-      <div className='Logo'>
-        <Logo />
-      </div>
+      <h1>Geaux-Tech</h1>
         <div className="UserLogOut">
           <UserLogOut  user={user} setUser={setUser} />
           <Link to="/orders" className="btn pink">Order History</Link>
