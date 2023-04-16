@@ -6,18 +6,17 @@
     background-color: var(--white);
     border-radius: 2vmin;
   }
-  
-  .NewOrderPage aside {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 3vmin 2vmin;
+
+  h1 {
+    text-align: center;
   }
 
-  .NewOrderPage header {
+  .UserLogOut {
+    text-align: right;
     margin: 20px;
-    display: flex;
-    justify-content: center;
-    
+    color:white;
   }
+
+.Logo {
+  position: relative;
+}

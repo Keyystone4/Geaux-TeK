@@ -50,29 +50,37 @@ export default function NewOrderPage({ user, setUser}) {
   }
 
   return (
+    
     <main className="NewOrderPage">
-        <header>
-          <Logo /> 
-          <Link to="/orders" className="button btn-sm">Order History</Link>
+      <div className='Logo'>
+        <Logo />
+      </div>
+        <div className="UserLogOut">
           <UserLogOut  user={user} setUser={setUser} />
-          </header>
+          <Link to="/orders" className="btn pink">Order History</Link>
+        </div>
+      
           
-      <aside>
+      <div className='CatergoryList'>
         <CategoryList
           categories={categoriesRef.current}
           activeCat={activeCat}
           setActiveCat={setActiveCat}
           />
-          </aside>
+      </div>
       <ProductList
         products={products.filter(product => product.category.name === activeCat)}
         handleAddToOrder={handleAddToOrder}
       />
+      <div className='OrderDetail'>
       <OrderDetail
         order={cart}
         handleChangeQty={handleChangeQty}
         handleCheckout={handleCheckout}
       />
+      </div>
     </main>
+    
   );
+  
 }

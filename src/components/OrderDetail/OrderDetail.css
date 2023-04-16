@@ -1,4 +1,4 @@
-.OrderDetail {
+/* .OrderDetail {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -44,4 +44,11 @@
     position: absolute;
     top: 50vh;
     font-size: 2vmin;
+  } */
+
+  .OrderDetail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(184, 15, 99);
   }

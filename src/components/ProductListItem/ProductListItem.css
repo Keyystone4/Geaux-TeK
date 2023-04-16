@@ -1,12 +1,19 @@
 .image {
-   height: 15vh;
+   height: 20vh;
   }
 
-body {
+.ProductListItem {
 display: flex;
-justify-content: center;
+justify-content: space-around;
+align-items: center;
+margin: auto;
+
 }
 
-Link {
-    color: hotpink;
+.name {
+  color: white;
+}
+
+.ProductListItem :hover {
+  color: hotpink;
 }

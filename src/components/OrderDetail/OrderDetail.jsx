@@ -16,7 +16,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
 
   return (
     <div className="OrderDetail">
-      <div className="section-heading">
+      <div className="">
         {order.isPaid ?
           <span>ORDER <span className="smaller">{order.orderId}</span></span>
           :
@@ -24,7 +24,8 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
         }
         <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
       </div>
-      <div className="line-product-container flex-ctr-ctr flex-col scroll-y">
+      <div className='card black'>
+      <div className="">
         {lineProducts.length ?
           <>
             {lineProducts}
@@ -33,7 +34,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
                 <span className="right">TOTAL&nbsp;&nbsp;</span>
                 :
                 <button
-                  className="btn-sm"
+                  className="btn pink"
                   onClick={handleCheckout}
                   disabled={!lineProducts.length}
                 >CHECKOUT</button>
@@ -46,6 +47,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
           <div className="Empty-cart">Cart is Empty</div>
         }
       </div>
+    </div>
     </div>
   );
 }
