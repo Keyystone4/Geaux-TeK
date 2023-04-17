@@ -14,9 +14,9 @@ Welcome to Geaux Tech ! This a user friendly store front app built with React th
 
 ☐ Technologies Used: React, Javascript, HTML, CSS, Materialize, MongoDB, & Express.
 
-☐ Getting Started:
+Check out our App :
 
-A link to the deployed app (Heroku)
+<a href="https://geauxtech.herokuapp.com/">Geaux Tech</a>
 
 <a href="https://trello.com/b/VsqhXsNo/geaux-tek-%F0%9F%96%A5%EF%B8%8F">Geaux Tech's Trello Board</a>
 
