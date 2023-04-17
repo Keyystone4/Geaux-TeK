@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import * as reviewsService from '../../utilities/reviews-service';
 import { useParams } from "react-router-dom";
 import './EditReview.css';
 
-export default function EditReviews() {
+export default function EditReviews({ user }) {
+  const [reviewOwner, setReviewOwner] = useState('');
     const [formData, setFormData] = useState({
         text: '',
     });
@@ -19,6 +20,16 @@ export default function EditReviews() {
         setFormData(updatedReview);
       }
 
+      useEffect(function() {
+        async function getReview() {
+          const review = await reviewsService.findOneReview(id)
+          setReviewOwner(review[0].user)
+          console.log(user)
+        }
+        getReview();
+      }, []);
+
+      let disable = reviewOwner === user._id ? false : true
     return (
         <>
         <br />
@@ -34,7 +45,7 @@ export default function EditReviews() {
           <label htmlFor="text">Text:
             <input type="text" name="text" id="text" onChange={handleChange} value={formData.text}/>
           </label>
-          <input className='btn pink' type="submit" value="Add Review" />
+          <input className='btn pink' type="submit" value="Edit Review" disabled={disable} />
         </form>
 
         </div>

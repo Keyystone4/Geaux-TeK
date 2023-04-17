@@ -33,7 +33,8 @@ export default function ProductDetailPage({user}) {
       </div>
     
       <Reviews 
-      product={product} />
+      product={product}
+      user={user} />
     </>
   );
 }

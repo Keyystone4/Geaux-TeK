@@ -17,3 +17,7 @@ export async function createReviewRequest(reviewData) {
     // const newReview = { reviewData }
     return sendRequest(BASE_URL, 'POST', reviewData);
   }
+
+  export async function findReviewRequest(id) {
+    return sendRequest(`${BASE_URL}/findone/${id}`);
+  }

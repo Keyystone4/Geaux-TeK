@@ -20,3 +20,8 @@ export async function createdReview(reviewData) {
   const NewReview = await reviewsAPI.createReviewRequest(reviewData)
   return NewReview
 }
+
+export async function findOneReview(id) {
+  const finddReview = await reviewsAPI.findReviewRequest(id)
+  return finddReview
+}

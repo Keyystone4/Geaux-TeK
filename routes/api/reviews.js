@@ -6,7 +6,8 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 // All paths start with '/api/reviews'
 router.post('/',ensureLoggedIn, reviewsCtrl.create);
 router.get('/:id', reviewsCtrl.index);
-router.put('/:id', reviewsCtrl.update);
-router.delete('/:id', reviewsCtrl.deleteOne);
+router.get('/findone/:id', reviewsCtrl.findOne);
+router.put('/:id', ensureLoggedIn, reviewsCtrl.update);
+router.delete('/:id', ensureLoggedIn, reviewsCtrl.deleteOne);
 
 module.exports = router

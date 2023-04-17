@@ -17,12 +17,19 @@ export default function OrderHistoryPage() {
     <>
     <Link to="/orders/new" className="btn pink">Create New Order</Link>
       <h1>Order History Page</h1>
+      <div className="orderHistory">
     <div className="orderHistory flex container center white">
 
       {cart.map(order =>{
-        return <h3>Order Id: {order._id}</h3>
+        let displayDate = new Date(order.createdAt).toLocaleDateString()
+        return (<><h3>Order Id: {order._id}</h3>
+          <h3>Date: {displayDate}</h3>
+          <h3>Total: ${order.orderTotal}</h3>
+          </>
+        )
       })}
 
+    </div>
     </div>
     </>
   );
