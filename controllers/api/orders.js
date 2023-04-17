@@ -32,7 +32,6 @@ async function setProductQtyInCart(req, res) {
 // Update the cart's isPaid property to true
 async function checkout(req, res) {
   const cart = await Order.getCart(req.user._id);
-  // console.log(cart);
   cart.isPaid = true;
   await cart.save();
   res.json(cart);
@@ -40,6 +39,5 @@ async function checkout(req, res) {
 
 async function allOrders(req, res) {
   const cart = await Order.find({ user: req.user._id });
-  console.log(cart);
   res.json(cart);
 }

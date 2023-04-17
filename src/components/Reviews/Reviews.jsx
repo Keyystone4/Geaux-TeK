@@ -17,27 +17,29 @@ export default function Reviews({ product }) {
 
     async function deleteReview(id) {
       const deletedReview = await reviewsService.deleteOneReview(id);
-      
-
+      setReviews(deletedReview);
     }
 
   return (
     <>
-      <h1>Reviews Page</h1>
+    <div className="center">
+
+      <h1>Reviews</h1>
 
       { reviews ?
         reviews.map(review =>
            <div>
             <h4>{review.text}</h4> 
          <Link to ={`/products/reviews/${review._id}`}>
-         <button>Edit</button>
+         <button className="btn pink ">Edit</button>
          </Link> 
-         <button onClick={()=> deleteReview(review._id)}>Delete</button>
+         <button className="btn pink" onClick={()=> deleteReview(review._id)}>Delete</button>
             </div>
         )
         :
         <h3>No Notes Yet!</h3>
       }
+    </div>
     </>
     
   );

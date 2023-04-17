@@ -13,7 +13,7 @@ export default function App() {
   const [user, setUser] = useState(getUser());
 
   return (
-    <div className='card black'>
+    
     <main className="App">
       { user ?
           <>
@@ -31,6 +31,6 @@ export default function App() {
           <AuthPage setUser={setUser} />
       }
     </main>
-    </div>
+
   );
 }

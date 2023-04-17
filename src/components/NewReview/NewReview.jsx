@@ -1,5 +1,7 @@
 import { useState } from "react";
 import * as reviewsService from '../../utilities/reviews-service';
+import './NewReview.css';
+
 
 
 
@@ -17,20 +19,25 @@ export default function NewReviewPage({product}) {
     async function handleSubmit(evt) {
       evt.preventDefault();
       const createdReview = await reviewsService.createdReview(review);
-      console.log(createdReview)
-      setReview('');
+      setReview(createdReview);
     }
   
     return (
       <>
+     
+        
+      <div className="flex container container ">
+
         <h1>New Review</h1>
         <form action="" onSubmit={handleSubmit} >
           <label htmlFor="text">Text:
-            <input type="text" name="text" id="text" onChange={handleChange} value={review.text}/>
+            <input className="input-field" type="text" name="text" id="text" onChange={handleChange} value={review.text}/>
           </label>
-          <input type="submit" value="Add Review" />
+          <input className="btn pink " type="submit" value="Submit Review" />
           
         </form>
+
+      </div>
       </>
     );
   }

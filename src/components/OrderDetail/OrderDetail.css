@@ -47,10 +47,16 @@
   } */
 
   .OrderDetail {
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: black;
     color: hotpink;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
   }

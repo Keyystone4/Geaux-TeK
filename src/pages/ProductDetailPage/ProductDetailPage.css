@@ -1,3 +1,15 @@
-.image {
-    height: 10vh;
+/* .image {
+    margin: 0 auto;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+} */
+
+.productDetails {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-align: center;
 }

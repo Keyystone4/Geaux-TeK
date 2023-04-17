@@ -3,7 +3,6 @@ import * as productsAPI from '../../utilities/products-api';
 import * as ordersAPI from '../../utilities/orders-api';
 import './NewOrderPage.css';
 import { Link, useNavigate } from 'react-router-dom';
-import Logo from '../../components/Logo/Logo';
 import ProductList from '../../components/ProductList/ProductList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
@@ -52,11 +51,11 @@ export default function NewOrderPage({ user, setUser}) {
   return (
     
     <main className="NewOrderPage">
-      <h1>Geaux-Tech</h1>
         <div className="UserLogOut">
-          <UserLogOut  user={user} setUser={setUser} />
           <Link to="/orders" className="btn pink">Order History</Link>
+          <UserLogOut  user={user} setUser={setUser} />
         </div>
+      <h1>Geaux-Tech</h1>
       
           
       <div className='CatergoryList'>

@@ -8,11 +8,14 @@ export default function UserLogOut({ user, setUser }) {
   }
 
   return (
+    <>
     <div className="UserLogOut">
       <div>Welcome Back, <span className='pink-text'>{user.name}</span> !</div>
       <br />
-      <button className="btn pink" onClick={handleLogOut}>LOG OUT</button>
     </div>
+      <button className="btn pink" onClick={handleLogOut}>LOG OUT</button>
+    
+    </>
   
   );
 }

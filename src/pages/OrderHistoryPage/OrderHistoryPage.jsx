@@ -1,6 +1,6 @@
-import OrderDetail from "../../components/OrderDetail/OrderDetail";
 import { useState, useEffect } from "react";
 import * as ordersAPI from '../../utilities/orders-api';
+import { Link } from 'react-router-dom';
 
 
 export default function OrderHistoryPage() {
@@ -9,17 +9,21 @@ export default function OrderHistoryPage() {
   useEffect(function() {
     async function getOrderHistory() {
       const orderHistory = await ordersAPI.getOrderHistory();
-      console.log(orderHistory);
       setCart(orderHistory);
     }
     getOrderHistory();
   }, [])
   return (
     <>
+    <Link to="/orders/new" className="btn pink">Create New Order</Link>
       <h1>Order History Page</h1>
+    <div className="orderHistory flex container center white">
+
       {cart.map(order =>{
-        return <h3>{order._id}</h3>
+        return <h3>Order Id: {order._id}</h3>
       })}
+
+    </div>
     </>
   );
 }
