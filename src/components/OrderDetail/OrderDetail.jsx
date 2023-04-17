@@ -17,12 +17,12 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
   return (
     <>
     
-    <div className="OrderDetail">
+    <div className="OrderDetail flex container">
       <div className="">
         {order.isPaid ?
           <span>ORDER <span className="smaller">{order.orderId}</span></span>
           :
-          <><span>CART</span><br /></>
+          <><span>YOUR CART</span><br /></>
         }
         <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
       </div>

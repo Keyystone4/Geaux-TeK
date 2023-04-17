@@ -17,8 +17,8 @@ export default function OrderHistoryPage() {
     <>
     <Link to="/orders/new" className="btn pink">Create New Order</Link>
       <h1>Order History Page</h1>
-      <div className="orderHistory">
-    <div className="orderHistory flex container center white">
+      <div className="History">
+    <div className="orderHistory flex container center black">
 
       {cart.map(order =>{
         let displayDate = new Date(order.createdAt).toLocaleDateString()
